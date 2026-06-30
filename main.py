@@ -13,7 +13,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React Vite frontend
+    allow_origins=[
+        "http://localhost:5173",
+        "https://front-core-bn-react.vercel.app",
+    ],  # React Vite frontend and deployment
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
